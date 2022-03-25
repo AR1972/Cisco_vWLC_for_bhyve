@@ -21,6 +21,7 @@ create a bridge interface and add your network interface, replace
 example_if with the interface you are using to conect to your network
 
 ifconfig bridge create
+
 ifconfig bridge0 addm example_if
 
 ------------------------------------------------------------------------
@@ -54,7 +55,7 @@ edit boot_vm.sh for your usecase
 restart the VM with boot_vm.sh, once the VM begins to boot, connect to
 the VM with a terminal program like cu.
  
-cu -l /dev/nmdm99
+cu -l /dev/nmdm99B
 
 once the VM has finished booting, the vWLC will begin an inital 
 setup, the managment inteface is the interface with the web interface
