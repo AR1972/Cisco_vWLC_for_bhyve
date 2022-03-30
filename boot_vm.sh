@@ -44,11 +44,11 @@ done
 $IFCONFIG $TAP0 create
 $IFCONFIG $TAP1 create
 $SYSCTL net.link.tap.up_on_open=1
-$IFCONFIG bridge0 addm $TAP1 
+$IFCONFIG bridge0 addm $TAP1
 #
-echo \(hd0\)$ZVOL > $PWD/device.map 
+echo \(hd0\)$ZVOL > /var/tmp/device.map
 #
-$GRUBBHYVE -m $PWD/device.map -r $ROOT -M 2048 $VM 
+$GRUBBHYVE -m /var/tmp/device.map -r $ROOT -M 2048 $VM
 #
 $BHYVE -A -H -P \
 -s 0:0,hostbridge \
